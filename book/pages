@@ -2,3 +2,6 @@ string methods and properties - p 67(up) or 48(list)
 parseInt - p 87 or 68
 true\false http://www.sitepoint.com/javascript-truthy-falsy/ (не работает?)
 equality 100 or 81
+swapping :D [x,y] = [y,x]
+How to Create and Manipulate Arrays in JavaScript https://www.sitepoint.com/quick-tip-create-manipulate-arrays-in-javascript/
+Destructuring Assignment https://www.sitepoint.com/es6-destructuring-assignment/
