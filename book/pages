@@ -5,3 +5,4 @@ equality 100 or 81
 swapping :D [x,y] = [y,x]
 How to Create and Manipulate Arrays in JavaScript https://www.sitepoint.com/quick-tip-create-manipulate-arrays-in-javascript/
 Destructuring Assignment https://www.sitepoint.com/es6-destructuring-assignment/
+objects https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
