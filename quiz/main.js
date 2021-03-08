@@ -1,5 +1,6 @@
 const game = {
     start(quiz) {
+        view.hide(view.start);
         this.questions = [...quiz];
         this.score = 0;
         // main game loop
@@ -12,7 +13,7 @@ const game = {
     },
     ask() {
         const question = `What is ${this.question.name}'s real name?`;
-        view.render(view.question,question);
+        view.render(view.question, question);
         const response = prompt(question);
         this.check(response);
     },
@@ -20,17 +21,18 @@ const game = {
     check(response) {
         const answer = this.question.realName;
         if (response === answer) {
-            view.render(view.result,'Correct!',{'class':'correct'});
+            view.render(view.result, 'Correct!', { 'class': 'correct' });
             alert('Correct!');
             this.score++;
-            view.render(view.score,this.score);
+            view.render(view.score, this.score);
         } else {
-            view.render(view.result,`Wrong! The correct answer was ${answer}`,{'class':'wrong'});
+            view.render(view.result, `Wrong! The correct answer was ${answer}`, { 'class': 'wrong' });
             alert(`Wrong! The correct answer was ${answer}`);
         }
     },
     gameOver() {
-        view.render(view.info,`Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`);
+        view.render(view.info, `Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`);
+        view.show(view.start);
     }
 }
 
@@ -38,10 +40,11 @@ const quiz = [
     { name: "Superman", realName: "Clark Kent" },
     { name: "Wonder Woman", realName: "Diana Prince" },
     { name: "Batman", realName: "Bruce Wayne" },
-]; 
+];
 
 // View Object
 const view = {
+    start: document.getElementById('start'),
     score: document.querySelector('#score strong'),
     question: document.getElementById('question'),
     result: document.getElementById('result'),
@@ -51,11 +54,18 @@ const view = {
             target.setAttribute(key, attributes[key]);
         }
         target.innerHTML = content;
+    },
+    show(element) {
+        element.style.display = 'block';
+    },
+    hide(element) {
+        element.style.display = 'none';
     }
 };
 
 const main = () => {
-    game.start(quiz);
+    //game.start(quiz);
+    view.start.addEventListener('click', () => game.start(quiz), false);
 }
 
 document.addEventListener('readystatechange', () => {
