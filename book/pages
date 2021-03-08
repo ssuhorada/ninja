@@ -10,3 +10,8 @@ regEx 5. http://www.regextester.com
 regEx 6. https://regex101.com
 regEx 7. http://www.amazon.com/Mastering-Regular-Expressions-Jeffrey-Friedl/dp/0596528124/
 regEx 8. http://www.regular-expressions.info/
+add\remove event func https://johnresig.com/blog/flexible-javascript-events/
+all events https://developer.mozilla.org/en-US/docs/Web/Events
+keycodes https://github.com/nostrademons/keycode.js/blob/master/keycode.js
+https://api.jquery.com/event.which/
+event-bubbling https://www.sitepoint.com/event-bubbling-javascript/
